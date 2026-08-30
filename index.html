@@ -279,6 +279,60 @@
     </footer>
 
     <script src="script.js"></script>
+<script>
+    // A unique namespace for your portfolio to store the data
+    const namespace = "sohail27_portfolio_stats";
 
+    // 1. Track and Display Page Views
+    async function trackViews() {
+        try {
+            // The '/up' endpoint automatically increments the count by 1
+            const response = await fetch(`https://api.counterapi.dev/v1/${namespace}/views/up`);
+            const data = await response.json();
+            document.getElementById('view-count').innerText = data.count;
+        } catch (error) {
+            document.getElementById('view-count').innerText = "Loading...";
+        }
+    }
+
+    // 2. Fetch Initial Appreciation Count
+    async function getAppreciations() {
+        try {
+            const response = await fetch(`https://api.counterapi.dev/v1/${namespace}/likes`);
+            const data = await response.json();
+            // If no likes yet, default to 0
+            document.getElementById('appreciation-count').innerText = data.count || 0;
+        } catch (error) {
+            document.getElementById('appreciation-count').innerText = "0";
+        }
+    }
+
+    // 3. Handle the Like Button Click
+    async function addAppreciation() {
+        const btn = document.getElementById('like-btn');
+        
+        // Temporarily disable button to prevent spam clicks
+        btn.disabled = true;
+        btn.innerText = "❤️ Thank You!";
+        
+        try {
+            const response = await fetch(`https://api.counterapi.dev/v1/${namespace}/likes/up`);
+            const data = await response.json();
+            document.getElementById('appreciation-count').innerText = data.count;
+        } catch (error) {
+            console.error("Failed to add appreciation");
+        }
+    }
+
+    // Attach click event to the button
+    document.getElementById('like-btn').addEventListener('click', addAppreciation);
+
+    // Run the functions when the page loads
+    window.onload = () => {
+        trackViews();
+        getAppreciations();
+    };
+</script>
+        
 </body>
       </html>
