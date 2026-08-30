@@ -459,5 +459,22 @@ body, section, header, .hero, main {
     background: #121212 !important;
     background-image: none !important;
 }
+body, section, header, .hero, main, .wrapper, .main-container {
+    background-color: #f8f9fa !important; /* Soft, professional off-white */
+    background-image: none !important;
+    color: #374151 !important; /* Deep charcoal text—never use pure black */
+}
 
+/* Update your cards to stand out against the off-white */
+.project-card, .service-box {
+    background-color: #ffffff !important; /* Pure white cards */
+    border: 1px solid #e5e7eb !important; /* Subtle gray border */
+    color: #4b5563 !important; 
+}
+
+/* Ensure headings stay dark and readable */
+h1, h2, h3 {
+    color: #111827 !important; 
+       }
+   
 
