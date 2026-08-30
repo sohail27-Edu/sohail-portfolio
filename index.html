@@ -277,31 +277,36 @@
     <footer>
         <p>© 2026 Sohail Ahmad. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 <script>
-    // A unique namespace for your portfolio to store the data
-    const namespace = "sohail27_portfolio_stats";
+    // Unique keys specifically for your portfolio to avoid overwriting other users
+    const viewsKey = "sohail27_portfolio_views";
+    const likesKey = "sohail27_portfolio_likes";
 
     // 1. Track and Display Page Views
     async function trackViews() {
         try {
-            // The '/up' endpoint automatically increments the count by 1
-            const response = await fetch(`https://api.counterapi.dev/v1/${namespace}/views/up`);
+            const response = await fetch(`https://countapi.mileshilliard.com/api/v1/hit/${viewsKey}`);
             const data = await response.json();
-            document.getElementById('view-count').innerText = data.count;
+            // This alternative API uses .value to return the number
+            document.getElementById('view-count').innerText = data.value;
         } catch (error) {
-            document.getElementById('view-count').innerText = "Loading...";
+            document.getElementById('view-count').innerText = "Error";
         }
     }
 
-    // 2. Fetch Initial Appreciation Count
+    // 2. Fetch Initial Appreciation Count on Page Load
     async function getAppreciations() {
         try {
-            const response = await fetch(`https://api.counterapi.dev/v1/${namespace}/likes`);
+            const response = await fetch(`https://countapi.mileshilliard.com/api/v1/get/${likesKey}`);
+            
+            // If the key doesn't exist yet, it returns a 404. Default to 0.
+            if (response.status === 404) {
+                document.getElementById('appreciation-count').innerText = "0";
+                return;
+            }
+            
             const data = await response.json();
-            // If no likes yet, default to 0
-            document.getElementById('appreciation-count').innerText = data.count || 0;
+            document.getElementById('appreciation-count').innerText = data.value;
         } catch (error) {
             document.getElementById('appreciation-count').innerText = "0";
         }
@@ -316,9 +321,9 @@
         btn.innerText = "❤️ Thank You!";
         
         try {
-            const response = await fetch(`https://api.counterapi.dev/v1/${namespace}/likes/up`);
+            const response = await fetch(`https://countapi.mileshilliard.com/api/v1/hit/${likesKey}`);
             const data = await response.json();
-            document.getElementById('appreciation-count').innerText = data.count;
+            document.getElementById('appreciation-count').innerText = data.value;
         } catch (error) {
             console.error("Failed to add appreciation");
         }
@@ -333,6 +338,7 @@
         getAppreciations();
     };
 </script>
+        
         
 </body>
       </html>
