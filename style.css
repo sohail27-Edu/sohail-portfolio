@@ -455,5 +455,9 @@ footer {
 .contact-btn:hover {
     opacity: 0.9;
 }
+body, section, header, .hero, main {
+    background: #121212 !important;
+    background-image: none !important;
+}
 
 
