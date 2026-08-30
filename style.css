@@ -246,7 +246,6 @@ header {
     color: #9ca7ba;
 }
 
-
 /* ================================
    PROJECTS
 ================================ */
@@ -256,6 +255,7 @@ header {
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
+
 .project-card {
     background-color: rgba(255, 255, 255, 0.4) !important; 
     backdrop-filter: blur(8px) !important; 
@@ -270,20 +270,6 @@ header {
 .project-card:hover {
     transform: translateY(-6px) !important;
     background-color: rgba(255, 255, 255, 0.6) !important;
-}
-
-.project-card:hover {
-    transform: translateY(-6px) !important;
-    background-color: rgba(255, 255, 255, 0.6) !important;
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-    background-color: rgba(255, 255, 255, 0.6);
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
 }
 
 .project-image {
@@ -306,16 +292,16 @@ header {
 }
 
 .project-info p {
-    color: #555555; /* Changed to slate-grey */
+    color: #555555 !important;
     margin-bottom: 18px;
     font-weight: 500;
 }
-
 
 .project-link {
     color: #4f8cff;
     font-weight: bold;
 }
+
 
 
 /* ================================
