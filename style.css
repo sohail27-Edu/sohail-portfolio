@@ -241,8 +241,6 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-
-
 .skill-card:hover {
     transform: translateY(-5px);
     border-color: #4f8cff;
@@ -271,9 +269,15 @@ header {
     backdrop-filter: blur(8px) !important; 
     -webkit-backdrop-filter: blur(8px) !important; 
     border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    padding: 30px !important;
     border-radius: 12px !important;
     overflow: hidden !important;
     transition: transform 0.3s ease, background-color 0.3s ease !important;
+}
+
+.project-card:hover {
+    transform: translateY(-6px) !important;
+    background-color: rgba(255, 255, 255, 0.6) !important;
 }
 
 .project-card:hover {
