@@ -1,6 +1,27 @@
 /* ================================
    RESET
 ================================ */
+/* 1. Global Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: #fcfcfc; /* A very soft, professional off-white */
+    color: #333333; /* Dark gray is easier on the eyes than pure black */
+    line-height: 1.6;
+}
+
+/* Add some breathing room to all your main sections */
+section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 
 * {
     margin: 0;
