@@ -469,4 +469,11 @@ body, section, header, .hero, main, .wrapper, .main-container {
     background-repeat: no-repeat !important;
     background-attachment: fixed !important; 
 }
+/* Modern Black Headings */
+h1, h2, h3, .section-title, .heading {
+    color: #000000 !important;
+    font-weight: 800 !important; /* Extra thick, modern weight */
+    letter-spacing: -0.03em !important; /* Tighter spacing for a premium feel */
+    text-transform: capitalize !important; 
+}
 
