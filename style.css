@@ -498,4 +498,78 @@ nav a:hover {
     box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3); /* Soft blue glow */
     transition: all 0.2s ease;
 }
+#stats {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white */
+    backdrop-filter: blur(8px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Aligns with your current mobile layout */
+@media (max-width: 768px) {
+    .stat-card {
+        text-align: left; 
+    }
+}
+
+@media (min-width: 769px) {
+    .stat-card {
+        text-align: center; 
+    }
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    color: #000000; 
+    margin: 0 0 5px 0;
+}
+
+.stat-card p {
+    color: #555555; /* Slate grey to match your paragraph text */
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.github-card {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.github-card img {
+    max-width: 100%;
+    height: auto;
+   }
 
