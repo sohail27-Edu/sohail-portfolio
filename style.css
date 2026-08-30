@@ -8,12 +8,14 @@
     box-sizing: border-box;
     font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
 }
-
 body {
-    background-color: #fcfcfc; /* A very soft, professional off-white */
-    color: #333333; /* Dark gray is easier on the eyes than pure black */
+    background-color: #121212;
+    color: #e2e8f0;
+    font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.6;
 }
+
+
 
 /* Add some breathing room to all your main sections */
 section {
@@ -265,7 +267,7 @@ header {
 
 .project-card {
     overflow: hidden;
-    background: #111827;
+    background: #1e1e1e;
     border: 1px solid #202a3d;
     border-radius: 10px;
     transition: 0.3s;
