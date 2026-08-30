@@ -476,4 +476,8 @@ h1, h2, h3, .section-title, .heading {
     letter-spacing: -0.03em !important; /* Tighter spacing for a premium feel */
     text-transform: capitalize !important; 
 }
+p, span, li, h4, h5, h6, .subtitle {
+    color: #4b5563 !important; /* Modern dark grey */
+    line-height: 1.7 !important; /* Adds breathing room between lines for readability */
+}
 
