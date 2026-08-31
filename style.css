@@ -270,14 +270,13 @@ header {
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
-
 .project-card {
     background-color: rgba(255, 255, 255, 0.4) !important; 
     backdrop-filter: blur(8px) !important; 
     -webkit-backdrop-filter: blur(8px) !important; 
     border: 1px solid rgba(255, 255, 255, 0.3) !important;
     padding: 30px !important;
-    border-radius: 8px !important;
+    border-radius: 8px !important; /* Changed to 8px to match stats cards */
     transition: transform 0.3s ease, background-color 0.3s ease !important;
 }
 
@@ -286,30 +285,25 @@ header {
     background-color: rgba(255, 255, 255, 0.6) !important;
 }
 
-.project-card h3 {
+.project-info {
+    padding: 0 !important; /* Removes extra padding so it aligns like stats */
+}
+
+.project-info h3 {
     color: #000000 !important;
+    margin-top: 15px !important;
     margin-bottom: 10px !important;
     font-size: 1.5rem !important;
 }
 
-.project-card p {
+.project-info p {
     color: #555555 !important;
     line-height: 1.6 !important;
+    font-size: 1.1rem !important; /* Matches stats paragraph size */
     margin: 0 !important;
+    font-weight: 500 !important;
 }
 
-.project-image {
-    height: 140px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: rgba(0, 0, 0, 0.04) !important;
-    color: #000000 !important;
-    font-size: 16px !important;
-    font-weight: bold !important;
-    border-radius: 8px !important;
-    margin-bottom: 15px !important;
-}
 
 .project-link {
     color: #4f8cff !important;
