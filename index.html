@@ -325,6 +325,30 @@
     };
 </script>
         
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" title="Go to top">
+    &#8593;
+</button>
+<script>
+    const backToTopBtn = document.getElementById("backToTop");
+
+    // Shows the button when you scroll down 300px
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add("show");
+        } else {
+            backToTopBtn.classList.remove("show");
+        }
+    });
+
+    // Scrolls to top smoothly when clicked
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
         
 </body>
       </html>
