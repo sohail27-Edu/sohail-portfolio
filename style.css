@@ -335,15 +335,6 @@ header {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
-.project-card, .service-box {
-    background-color: #ffffff !important;
-    border: 1px solid #f3f4f6 !important; /* Extremely light gray edge */
-    border-radius: 12px; /* Slightly rounder edges look more modern */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Prepares it for Step 2 */
-}
-
 
 
 /* ================================
