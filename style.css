@@ -896,46 +896,67 @@ nav a:hover {
 .menu-checkbox {
     display: none !important;
 }
-
+/* ================================
+   DROPDOWN MENU (LARGER & LONGER)
+================================ */
 .mobile-nav {
     position: absolute !important;
     top: 75px !important; 
     right: 20px !important;
-    background: rgba(255, 255, 255, 0.8) !important;
-    backdrop-filter: blur(15px) !important;
-    -webkit-backdrop-filter: blur(15px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    background-color: #fcf4ec !important; /* Light cream to contrast your header */
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
     border-radius: 12px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
     display: flex !important;
     flex-direction: column !important;
-    width: 220px !important;
+    width: 260px !important; /* Made wider */
+    min-height: 400px !important; /* Made longer */
+    padding-bottom: 20px !important;
     opacity: 0 !important;
     transform: translateY(-15px) !important;
     pointer-events: none !important;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
 }
 
-.menu-checkbox:checked ~ .mobile-nav {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-    pointer-events: auto !important;
-}
-
 .mobile-nav a {
-    padding: 15px 20px !important;
+    padding: 20px 25px !important; /* Taller touch areas for links */
     text-decoration: none !important;
     color: #000000 !important;
     font-weight: 600 !important;
+    font-size: 18px !important; /* Larger text */
     border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
     transition: color 0.3s ease, padding-left 0.3s ease !important;
 }
 
 .mobile-nav a:hover {
     color: #4285f4 !important;
-    padding-left: 28px !important;
+    padding-left: 32px !important;
     background: rgba(66, 133, 244, 0.05) !important;
 }
+
+/* Cross Button at the Bottom */
+.close-btn {
+    margin-top: auto !important; /* Forces the button to the very bottom */
+    align-self: center !important;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 22px !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+.close-btn:hover {
+    transform: scale(1.1) !important;
+    background-color: #ff4757 !important; /* Turns red when touched */
+   }
+   
 
 /* Floating Logo Animation */
 .logo-box {
