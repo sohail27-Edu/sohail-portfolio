@@ -19,20 +19,32 @@
     <!-- Glassmorphism Animated Header -->
 <header class="glass-header">
     <div class="header-left">
-        <!-- Logo Box -->
+        <!-- Floating Logo -->
         <div class="logo-box">SA</div>
         
-        <!-- Animated Name & Tagline -->
         <div class="brand-text">
             <h1 class="brand-name">Sohail Ahmad</h1>
-            <span class="brand-tagline">Web Developer</span>
+            <!-- Self-Typing Animation Wrapper -->
+            <div class="typewriter">
+                <span class="brand-tagline">Web Developer</span>
+            </div>
         </div>
     </div>
     
-    <!-- Hamburger Menu Icon -->
-    <div class="menu-btn" title="Menu">
+    <!-- Functional CSS-Only Menu Toggle -->
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    <label for="menu-toggle" class="menu-btn" title="Menu">
         <i class="fa-solid fa-bars"></i>
-    </div>
+    </label>
+    
+    <!-- Glassmorphic Dropdown Menu -->
+    <nav class="mobile-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
     
 
