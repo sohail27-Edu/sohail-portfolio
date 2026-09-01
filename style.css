@@ -740,4 +740,52 @@ nav a:hover {
     color: #555555 !important;
     text-align: center !important;
    }
-   
+   /* ================================
+   SOCIAL MEDIA ICONS
+================================ */
+.footer-social-icons {
+    display: flex !important;
+    gap: 15px !important;
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+}
+
+.social-icon {
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important; /* Makes them perfectly round */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 20px !important;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    transition: transform 0.3s ease, opacity 0.3s ease !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Specific Icon Colors */
+.email-icon {
+    background-color: transparent !important;
+    border: 1px solid #000000 !important; /* Dark border to stand out on peach */
+    color: #000000 !important;
+}
+
+.email-icon:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.whatsapp-icon {
+    background-color: #25D366 !important; /* Official WhatsApp Green */
+}
+
+.linkedin-icon {
+    background-color: #0077B5 !important; /* Official LinkedIn Blue */
+}
+
+.social-icon:hover {
+    transform: translateY(-4px) !important; /* Slight bounce on hover */
+    opacity: 0.85 !important;
+}
+
