@@ -789,7 +789,7 @@ nav a:hover {
     opacity: 0.85 !important;
 }
 /* ================================
-   GLASS HEADER & NAVIGATION
+   HEADER (SOLID CREAM BACKGROUND)
 ================================ */
 .glass-header {
     position: fixed !important;
@@ -800,14 +800,15 @@ nav a:hover {
     justify-content: space-between !important;
     align-items: center !important;
     padding: 15px 30px !important;
-    background-color: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
+    background-color: #FDF5E6 !important; /* Solid creamy color */
+    backdrop-filter: none !important; /* Removes the glass blur */
+    -webkit-backdrop-filter: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important; /* Subtle border */
     z-index: 1000 !important;
     box-sizing: border-box !important;
     animation: slideDownFade 0.8s ease-out forwards !important;
 }
+
 
 .header-left {
     display: flex !important;
