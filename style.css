@@ -889,41 +889,51 @@ nav a:hover {
 @keyframes shineText {
     to { background-position: 200% center; }
 }
+
 /* ================================
-   FUNCTIONAL MENU & ANIMATIONS
+   FUNCTIONAL DROPDOWN MENU
 ================================ */
-/* Dropdown Logic */
+/* 1. Hide the actual checkbox */
 .menu-checkbox {
     display: none !important;
 }
-/* ================================
-   DROPDOWN MENU (LARGER & LONGER)
-================================ */
+
+/* 2. The Logic: When checkbox is checked, show the menu */
+.menu-checkbox:checked ~ .mobile-nav {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+}
+
+/* 3. The Menu Layout (Larger & Longer) */
 .mobile-nav {
     position: absolute !important;
     top: 75px !important; 
     right: 20px !important;
-    background-color: #fcf4ec !important; /* Light cream to contrast your header */
+    background-color: #fcf4ec !important; 
     border: 1px solid rgba(0, 0, 0, 0.1) !important;
     border-radius: 12px !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
     display: flex !important;
     flex-direction: column !important;
-    width: 260px !important; /* Made wider */
-    min-height: 400px !important; /* Made longer */
+    width: 260px !important; 
+    min-height: 400px !important; 
     padding-bottom: 20px !important;
+    
+    /* Hidden by default */
     opacity: 0 !important;
     transform: translateY(-15px) !important;
     pointer-events: none !important;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
 }
 
+/* 4. The Links */
 .mobile-nav a {
-    padding: 20px 25px !important; /* Taller touch areas for links */
+    padding: 20px 25px !important; 
     text-decoration: none !important;
     color: #000000 !important;
     font-weight: 600 !important;
-    font-size: 18px !important; /* Larger text */
+    font-size: 18px !important; 
     border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
     transition: color 0.3s ease, padding-left 0.3s ease !important;
 }
@@ -934,9 +944,9 @@ nav a:hover {
     background: rgba(66, 133, 244, 0.05) !important;
 }
 
-/* Cross Button at the Bottom */
+/* 5. Cross Button at the Bottom */
 .close-btn {
-    margin-top: auto !important; /* Forces the button to the very bottom */
+    margin-top: auto !important; 
     align-self: center !important;
     background-color: #000000 !important;
     color: #ffffff !important;
@@ -954,7 +964,7 @@ nav a:hover {
 
 .close-btn:hover {
     transform: scale(1.1) !important;
-    background-color: #ff4757 !important; /* Turns red when touched */
+    background-color: #ff4757 !important; 
    }
    
 
