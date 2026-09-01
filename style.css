@@ -889,4 +889,88 @@ nav a:hover {
 @keyframes shineText {
     to { background-position: 200% center; }
 }
+/* ================================
+   FUNCTIONAL MENU & ANIMATIONS
+================================ */
+/* Dropdown Logic */
+.menu-checkbox {
+    display: none !important;
+}
 
+.mobile-nav {
+    position: absolute !important;
+    top: 75px !important; 
+    right: 20px !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 220px !important;
+    opacity: 0 !important;
+    transform: translateY(-15px) !important;
+    pointer-events: none !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.menu-checkbox:checked ~ .mobile-nav {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+}
+
+.mobile-nav a {
+    padding: 15px 20px !important;
+    text-decoration: none !important;
+    color: #000000 !important;
+    font-weight: 600 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    transition: color 0.3s ease, padding-left 0.3s ease !important;
+}
+
+.mobile-nav a:hover {
+    color: #4285f4 !important;
+    padding-left: 28px !important;
+    background: rgba(66, 133, 244, 0.05) !important;
+}
+
+/* Floating Logo Animation */
+.logo-box {
+    animation: floatLogo 3s ease-in-out infinite !important;
+}
+
+@keyframes floatLogo {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); box-shadow: 0 6px 12px rgba(66, 133, 244, 0.2); }
+}
+
+/* Self-Typing Effect */
+.typewriter {
+    display: inline-block !important;
+}
+
+.brand-tagline {
+    display: inline-block !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    border-right: 2px solid #4285f4 !important; /* Blinking cursor */
+    animation: typing 3s steps(30, end) infinite, blink 0.75s step-end infinite !important;
+    font-size: 13px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    color: #4285f4 !important;
+}
+
+@keyframes typing {
+    0%, 100% { width: 0; }
+    50%, 80% { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #4285f4; }
+   }
+   
