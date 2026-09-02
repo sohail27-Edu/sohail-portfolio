@@ -1074,13 +1074,17 @@ nav a:hover {
     color: #555 !important;
     font-weight: 600 !important;
 }
+
+/* 1. Base style for mobile screens first */
+#states .states-container:first-of-type {
+    margin-bottom: 50px !important;
+}
+
+/* 2. Larger gap for desktop screens placed AFTER */
 @media (min-width: 768px) {
     #states .states-container:first-of-type {
         margin-bottom: 100px !important; 
     }
-}
-#states .states-container:first-of-type {
-    margin-bottom: 50px !important;
    }
-
+   
    
