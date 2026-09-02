@@ -451,5 +451,40 @@
             });
         });
     </script>
+    const counters = document.querySelectorAll('.counter');
+const speed = 100; 
+
+const animateCounters = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = +counter.getAttribute('data-target');
+            
+            const updateCount = () => {
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 15);
+                } else {
+                    counter.innerText = target; 
+                }
+            };
+            
+            updateCount();
+            observer.unobserve(counter); 
+        }
+    });
+};
+
+const counterObserver = new IntersectionObserver(animateCounters, {
+    threshold: 0.5 
+});
+
+counters.forEach(counter => {
+    counterObserver.observe(counter);
+});
+                    
 </body>
 </html>
