@@ -1192,9 +1192,10 @@ a.btn:hover, button:hover {
     /* 'infinite alternate' makes it type forward, erase backward, and repeat endlessly */
     animation: typing 2.5s steps(30, end) infinite alternate, blink 0.75s step-end infinite !important;
    }
-   
-/* Bold black bottom border for the header */
-header {
+
+/* Bold black bottom border targeting all common header tags */
+header, nav, .header, .nav, .navbar, #header, #nav {
     border-bottom: 4px solid #000000 !important;
    }
+
    
