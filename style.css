@@ -1079,5 +1079,8 @@ nav a:hover {
         margin-bottom: 100px !important; 
     }
 }
+#states .states-container:first-of-type {
+    margin-bottom: 50px !important;
+   }
 
    
