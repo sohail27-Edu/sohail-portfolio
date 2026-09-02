@@ -480,38 +480,22 @@
         });
     };
 
-    // Trigger animation when just 10% of the section scrolls into view
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounters();
-                statsObserver.unobserve(entry.target); // Run only once
-            }
-        });
-    }, { threshold: 0.1 }); // Lowered from 0.5 to 0.1 for mobile screens
-
-    const statesSection = document.getElementById('states');
-    if (statesSection) {
-        statsObserver.observe(statesSection);
-    }
-</script>
-
-<script>
-const sections = document.querySelectorAll("section");
+    <script>
+const revealElements = document.querySelectorAll('.scroll-reveal');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add("show");
+            entry.target.classList.add('show');
         }
     });
 }, {
     threshold: 0.15
 });
 
-sections.forEach(section => {
-    observer.observe(section);
+revealElements.forEach(element => {
+    observer.observe(element);
 });
-                 </script>
+</script>
 </body>
-      </html>
+        </html>
