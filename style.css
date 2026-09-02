@@ -1198,4 +1198,14 @@ header, nav, .header, .nav, .navbar, #header, #nav {
     border-bottom: 4px solid #000000 !important;
    }
 
-   
+/* Scroll Reveal Animation */
+section {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+   }
