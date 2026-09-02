@@ -1074,5 +1074,10 @@ nav a:hover {
     color: #555 !important;
     font-weight: 600 !important;
 }
+@media (min-width: 768px) {
+    #states .states-container:first-of-type {
+        margin-bottom: 100px !important; 
+    }
+}
 
    
