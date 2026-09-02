@@ -245,25 +245,23 @@
         </div>
         
         <!-- Static Card 1 -->
-        <div class="state-card">
-            <h3>5+</h3>
-            <p>Completed Projects</p>
-        </div>
+<div class="state-card">
+    <h3><span class="counter" data-target="5">0</span>+</h3>
+    <p>Completed Projects</p>
+</div>
+
+<!-- Static Card 2 -->
+<div class="state-card">
+    <h3><span class="counter" data-target="100">0</span>%</h3>
+    <p>Client Satisfaction</p>
+</div>
+
+<!-- Static Card 3 -->
+<div class="state-card">
+    <h3><span class="counter" data-target="15">0</span>+</h3>
+    <p>Web Technologies</p>
+</div>
         
-        <!-- Static Card 2 -->
-        <div class="state-card">
-            <h3>100%</h3>
-            <p>Client Satisfaction</p>
-        </div>
-        
-        <!-- Static Card 3 -->
-        <div class="state-card">
-            <h3>15+</h3>
-            <p>Web Technologies</p>
-        </div>
-    </div>
-</section>
-    
                 
         
     <!-- Contact -->
@@ -439,6 +437,47 @@
 </body>
 </html>
 
+<!-- Number Counter Animation Script -->
+<script>
+    const counters = document.querySelectorAll('.counter');
+    const speed = 100; // Adjust this to make it faster or slower
+
+    const animateCounters = () => {
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                
+                // Calculate the increment step
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 15);
+                } else {
+                    counter.innerText = target; // Lock it at the exact target
+                }
+            };
+            updateCount();
+        });
+    };
+
+    // Trigger animation only when the section scrolls into view
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                statsObserver.unobserve(entry.target); // Run only once
+            }
+        });
+    }, { threshold: 0.5 }); // Triggers when 50% of the section is visible
+
+    const statesSection = document.getElementById('states');
+    if (statesSection) {
+        statsObserver.observe(statesSection);
+    }
+</script>
+        
     
 </body>
       </html>
