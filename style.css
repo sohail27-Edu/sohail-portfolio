@@ -1091,10 +1091,15 @@ nav a:hover {
    MODERN ENTRANCE ANIMATIONS & GRADIENTS
 ================================ */
 
+/* ================================
+   HERO SECTION MODERN ANIMATIONS & STYLES
+================================ */
+
+/* Smooth fade-in & slide-up entrance for hero elements */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(25px);
     }
     to {
         opacity: 1;
@@ -1102,31 +1107,32 @@ nav a:hover {
     }
 }
 
-/* Apply gradient and entrance animation to your name */
+/* Apply staggered entrance animations to hero text */
+.hero-section h1, 
 .brand-name {
     animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
-    background: linear-gradient(135deg, #000000 35%, #4285f4 100%) !important;
+    background: linear-gradient(135deg, #000000 30%, #4285f4 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
+    letter-spacing: -0.5px !important;
 }
 
-/* Apply entrance animation to your tagline */
-.brand-tagline, .typewriter {
+.hero-section p, 
+.brand-tagline,
+.hero-section .typewriter {
     animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards !important;
-    opacity: 0;
+    opacity: 0; /* Starts hidden for the animation */
 }
 
-/* Smooth hover effects for buttons */
-a.btn, button {
+/* Modern subtle glow and smooth scale on hero buttons */
+.hero-section .btn, 
+.hero-section a[href*="#"] {
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease !important;
 }
 
-a.btn:hover, button:hover {
+.hero-section .btn:hover {
     transform: translateY(-3px) scale(1.02) !important;
     box-shadow: 0 10px 25px rgba(66, 133, 244, 0.25) !important;
 }
-
-
-
 
 
