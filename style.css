@@ -1169,3 +1169,27 @@ a.btn:hover, button:hover {
     opacity: 0;
 }
 
+/* ================================
+   HEADER ENDLESS TYPEWRITER ANIMATION
+================================ */
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #4285f4; }
+}
+
+/* Targets the header typing text */
+.brand-tagline, .typewriter span {
+    display: inline-block !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    border-right: 3px solid #4285f4 !important;
+    /* 'infinite alternate' makes it type forward, erase backward, and repeat endlessly */
+    animation: typing 2.5s steps(30, end) infinite alternate, blink 0.75s step-end infinite !important;
+   }
+   
