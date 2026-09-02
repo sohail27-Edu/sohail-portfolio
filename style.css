@@ -1197,16 +1197,3 @@ a.btn:hover, button:hover {
 header, nav, .header, .nav, .navbar, #header, #nav {
     border-bottom: 4px solid #000000 !important;
    }
-
-/* Smooth scroll reveal for content only */
-
-.scroll-reveal {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.scroll-reveal.show {
-    opacity: 1;
-    transform: translateY(0);
-   }
