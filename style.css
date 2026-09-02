@@ -1021,13 +1021,15 @@ nav a:hover {
     color: #000000 !important;
 }
 
+/* ================================
+   STATES SECTION (UNIFORM CARDS)
+================================ */
 .states-container {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
-    align-items: flex-start !important; /* Prevents vertical stretching */
     gap: 20px !important;
-    max-width: 1100px !important; /* Widened to fit all 5 cards in one row on desktop */
+    max-width: 1100px !important; 
     margin: 0 auto !important;
 }
 
@@ -1035,17 +1037,25 @@ nav a:hover {
     background: rgba(255, 255, 255, 0.4) !important;
     border: 1px solid rgba(255, 255, 255, 0.6) !important;
     border-radius: 12px !important;
-    padding: 30px 15px !important;
-    min-width: 160px !important;
-    max-width: 200px !important; /* Stops the card from growing too wide */
-    flex: 1 1 160px !important; 
-    height: fit-content !important; /* Locks the height to match the text inside */
+    padding: 20px !important;
+    
+    /* Strict Uniform Dimensions */
+    width: 180px !important; 
+    height: 160px !important; 
+    flex: 0 0 auto !important; /* Stops the browser from resizing the card */
+    box-sizing: border-box !important;
+    
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
     transition: transform 0.3s ease !important;
+    
+    /* Center the text perfectly inside the uniform box */
     display: flex !important;
     flex-direction: column !important;
+    justify-content: center !important;
     align-items: center !important;
+    text-align: center !important;
 }
+
 
 
 .state-card:hover {
