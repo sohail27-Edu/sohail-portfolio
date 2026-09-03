@@ -1239,3 +1239,11 @@ header, nav, .header, .nav, .navbar, #header, #nav {
     text-decoration: none !important;
     margin: 0 !important; /* Prevents stacked margins */
 }
+/* ================================
+   GITHUB ICON STYLING
+================================ */
+.social-icon.github-icon:hover {
+    background-color: #24292e !important;
+    color: #ffffff !important;
+    border-color: #24292e !important;
+}
