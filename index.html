@@ -490,6 +490,46 @@
     });
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.counter');
+    
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const targetAttr = counter.getAttribute('data-target');
+                
+                // Failsafe: Stops the script from crashing if an element is missing data-target
+                if (!targetAttr) return; 
+                
+                const target = parseInt(targetAttr, 10);
+                let count = 0;
+                counter.innerText = count;
+                
+                // Dynamically calculates speed so all counters finish at the exact same time
+                const increment = Math.ceil(target / 40); 
+                
+                const updateCount = setInterval(() => {
+                    count += increment;
+                    if (count >= target) {
+                        counter.innerText = target; // Lock exact target number
+                        clearInterval(updateCount); // Stop loop
+                    } else {
+                        counter.innerText = count;
+                    }
+                }, 40); // 40 milliseconds per frame
+                
+                observer.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.2 }); // Reduced to 0.2 so it triggers sooner on mobile screens
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+});
+</script>
     
 </body>
 </html>
