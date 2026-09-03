@@ -1212,3 +1212,15 @@ header, nav, .header, .nav, .navbar, #header, #nav {
     opacity: 0;
    }
    
+/* ================================
+   FOOTER MOTTO
+================================ */
+.footer-motto {
+    color: #64748b !important; 
+    font-weight: 300 !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+    font-size: 0.95rem !important;
+    margin-top: 5px !important;
+    margin-bottom: 15px !important;
+}
