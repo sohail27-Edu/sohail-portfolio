@@ -773,6 +773,16 @@ nav a:hover {
 .whatsapp-icon {
     background-color: #25D366 !important; /* Official WhatsApp Green */
 }
+/* Force override for GitHub icon background and hover */
+.social-icons a.social-icon.github-icon {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.social-icons a.social-icon.github-icon:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
 
 .linkedin-icon {
     background-color: #0077B5 !important; /* Official LinkedIn Blue */
@@ -1238,11 +1248,4 @@ header, nav, .header, .nav, .navbar, #header, #nav {
     align-items: center !important;
     text-decoration: none !important;
     margin: 0 !important; /* Prevents stacked margins */
-}
-/* ================================
-   GITHUB ICON STYLING
-================================ */
-.social-icon.github-icon:hover {
-    background-color: #000000 !important;
-    color: #ffffff !important;
 }
