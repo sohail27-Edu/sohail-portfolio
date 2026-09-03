@@ -774,12 +774,12 @@ nav a:hover {
     background-color: #25D366 !important; /* Official WhatsApp Green */
 }
 /* Force override for GitHub icon background and hover */
-.social-icons a.social-icon.github-icon {
+.social-icons a.social-icon.Github-icon {
     background-color: #000000 !important;
     color: #ffffff !important;
 }
 
-.social-icons a.social-icon.github-icon:hover {
+.social-icons a.social-icon.Github-icon:hover {
     background-color: #000000 !important;
     color: #ffffff !important;
 }
