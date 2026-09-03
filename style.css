@@ -743,12 +743,25 @@ nav a:hover {
    /* ================================
    SOCIAL MEDIA ICONS
 ================================ */
-.footer-social-icons {
+/* ================================
+   SOCIAL ICONS HORIZONTAL ALIGNMENT
+================================ */
+.social-icons {
     display: flex !important;
-    gap: 15px !important;
-    margin-top: 20px !important;
-    margin-bottom: 30px !important;
+    flex-direction: row !important; /* Forces horizontal layout */
+    justify-content: center !important; /* Centers them on the page */
+    align-items: center !important;
+    gap: 25px !important; /* Creates perfect, even spacing */
+    margin: 40px 0 20px 0 !important; 
+    flex-wrap: wrap !important;
 }
+
+/* Ensures the icons themselves don't have rogue margins */
+.social-icons a, .social-icons img, .social-icons i {
+    display: inline-flex !important;
+    margin: 0 !important; 
+}
+
 
 .social-icon {
     width: 45px !important;
