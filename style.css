@@ -1249,3 +1249,26 @@ header, nav, .header, .nav, .navbar, #header, #nav {
     text-decoration: none !important;
     margin: 0 !important; /* Prevents stacked margins */
 }
+/* Base social icon sizing so backgrounds render properly */
+.social-icon {
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    transition: transform 0.2s ease !important;
+}
+
+/* Force override for GitHub icon background and hover */
+.social-icons a.social-icon.github-icon {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.social-icons a.social-icon.github-icon:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+   }
