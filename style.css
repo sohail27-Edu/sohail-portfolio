@@ -1197,3 +1197,18 @@ a.btn:hover, button:hover {
 header, nav, .header, .nav, .navbar, #header, #nav {
     border-bottom: 4px solid #000000 !important;
    }
+/* ================================
+   HERO MOTTO STYLING
+================================ */
+.hero-content .motto {
+    color: #64748b !important; /* Slate-grey color */
+    font-weight: 400 !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 3px !important; /* Wide spacing for a modern aesthetic */
+    text-transform: uppercase !important;
+    margin-top: -5px !important;
+    margin-bottom: 20px !important;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards !important;
+    opacity: 0;
+   }
+   
