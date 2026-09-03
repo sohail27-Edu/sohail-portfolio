@@ -1243,7 +1243,7 @@ header, nav, .header, .nav, .navbar, #header, #nav {
    GITHUB ICON STYLING
 ================================ */
 .social-icon.github-icon:hover {
-    background-color: #24292e !important;
+    background-color: #000000 !important;
     color: #ffffff !important;
     border-color: #24292e !important;
 }
