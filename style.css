@@ -19,7 +19,6 @@ body {
 }
 
 
-
 /* Add some breathing room to all your main sections */
 section {
     padding: 80px 5%;
@@ -1281,6 +1280,4 @@ header, nav, .header, .nav, .navbar, #header, #nav {
 body, h1, h2, h3, h4, h5, h6, p, span, li {
     color: #000000 !important;
 }
-body {
-    background-color: #f3f4f6 !important; /* Replace with your chosen hex code */
-}
+
