@@ -1220,7 +1220,7 @@ header, nav, .header, .nav, .navbar, #header, #nav {
    FOOTER MOTTO
 ================================ */
 .footer-motto {
-    color: #64748b !important; 
+    color: #334155 !important; 
     font-weight: 300 !important;
     letter-spacing: 3px !important;
     text-transform: uppercase !important;
