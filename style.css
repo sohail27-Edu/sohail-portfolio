@@ -1272,3 +1272,9 @@ header, nav, .header, .nav, .navbar, #header, #nav {
     color: #ffffff !important;
     transform: translateY(-2px) !important;
    }
+/* ================================
+   UNIVERSAL BLACK TYPOGRAPHY
+================================ */
+body, h1, h2, h3, h4, h5, h6, p, span, li {
+    color: #000000 !important;
+}
