@@ -9,10 +9,8 @@
     font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
 }
 body {
-  background-color: #f8fafc; /* Very soft grey base */
-  /* Creates a subtle dot grid */
-  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-  background-size: 30px 30px;
+  background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 50%, #d9d9d9 100%);
+  background-attachment: fixed;
   color: #000000;
   margin: 0;
   min-height: 100vh;
@@ -39,7 +37,8 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: #0b0f19;
+    background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 50%, #d9d9d9 100%);
+    background-attachment: fixed;
     color: #ffffff;
     line-height: 1.6;
 }
@@ -473,11 +472,11 @@ footer {
     opacity: 0.9;
 }
 body, section, header, .hero, main, .wrapper, .main-container {
-    background-image: url('1000252920.jpg') !important;
+    background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 50%, #d9d9d9 100%) !important;
+    background-attachment: fixed !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
-    background-attachment: fixed !important; 
 }
 /* Modern Black Headings */
 h1, h2, h3, .section-title, .heading {
@@ -806,7 +805,7 @@ nav a:hover {
     justify-content: space-between !important;
     align-items: center !important;
     padding: 15px 30px !important;
-    background-color: #e5b993 !important; /* Solid color matching your site */
+    background: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 50%, #a9a9a9 100%) !important;
     backdrop-filter: none !important; 
     -webkit-backdrop-filter: none !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important; 
@@ -998,286 +997,15 @@ nav a:hover {
     white-space: nowrap !important;
     border-right: 2px solid #4285f4 !important; /* Blinking cursor */
     animation: typing 3s steps(30, end) infinite, blink 0.75s step-end infinite !important;
-    font-size: 13px !important;
-    text-transform: uppercase !important;
-    letter-spacing: 2px !important;
-    color: #4285f4 !important;
 }
 
-@keyframes typing {
-    0%, 100% { width: 0; }
-    50%, 80% { width: 100%; }
-}
-
-@keyframes blink {
-    from, to { border-color: transparent; }
-    50% { border-color: #4285f4; }
-   }
-/* ================================
-   STATES SECTION
-================================ */
-.states-section {
-    padding: 60px 20px !important;
-    text-align: center !important;
-}
-
-.states-section h2 {
-    font-size: 28px !important;
-    margin-bottom: 40px !important;
-    color: #000000 !important;
-}
-
-/* ================================
-   STATES SECTION (UNIFORM CARDS)
-================================ */
-.states-container {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 20px !important;
-    max-width: 1100px !important; 
-    margin: 0 auto !important;
-}
-
-.state-card {
-    background: rgba(255, 255, 255, 0.4) !important;
-    border: 1px solid rgba(255, 255, 255, 0.6) !important;
-    border-radius: 12px !important;
-    padding: 20px !important;
-    
-    /* Strict Uniform Dimensions */
-    width: 180px !important; 
-    height: 160px !important; 
-    flex: 0 0 auto !important; /* Stops the browser from resizing the card */
-    box-sizing: border-box !important;
-    
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
-    transition: transform 0.3s ease !important;
-    
-    /* Center the text perfectly inside the uniform box */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-}
-
-
-
-.state-card:hover {
-    transform: translateY(-5px) !important;
-}
-
-.state-card h3 {
-    font-size: 36px !important;
-    color: #4285f4 !important; /* Your blue accent */
-    margin: 0 0 10px 0 !important;
-}
-
-.state-card p {
-    margin: 0 !important;
-    font-size: 16px !important;
-    color: #555 !important;
-    font-weight: 600 !important;
-}
-
-/* 1. Base style for mobile screens first */
-#states .states-container:first-of-type {
-    margin-bottom: 50px !important;
-}
-
-/* 2. Larger gap for desktop screens placed AFTER */
-@media (min-width: 768px) {
-    #states .states-container:first-of-type {
-        margin-bottom: 100px !important; 
-    }
-   }
-   
-/* ================================
-   MODERN ENTRANCE ANIMATIONS & GRADIENTS
-================================ */
-/* ================================
-   CLASSIC TYPEWRITER ANIMATION
-================================ */
-
+/* Typing Animation */
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
 }
 
+/* Blinking Cursor */
 @keyframes blink {
-    0%, 100% { border-color: transparent; }
-    50% { border-color: #4285f4; }
+    50% { border-right-color: transparent; }
 }
-
-/* Apply gradient to your name */
-.brand-name {
-    background: linear-gradient(135deg, #000000 35%, #4285f4 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-}
-
-/* Classic Typewriter Tagline Effect */
-.brand-tagline, .typewriter span {
-    display: inline-block !important;
-    overflow: hidden !important;
-    white-space: nowrap !important;
-    border-right: 3px solid #4285f4 !important;
-    animation: typing 3.5s steps(30, end) forwards, blink 0.75s step-end infinite !important;
-    width: 0; /* Starts hidden and types out */
-}
-
-/* Smooth hover effects for buttons */
-a.btn, button {
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease !important;
-}
-
-a.btn:hover, button:hover {
-    transform: translateY(-3px) scale(1.02) !important;
-    box-shadow: 0 10px 25px rgba(66, 133, 244, 0.25) !important;
-}
-/* ================================
-   HERO STAGGERED ENTRANCE ANIMATIONS
-================================ */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-content .intro {
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards !important;
-    opacity: 0;
-}
-
-.hero-content h1 {
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards !important;
-    opacity: 0;
-}
-
-.hero-content h2 {
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards !important;
-    opacity: 0;
-}
-
-.hero-content > p:not(.intro) {
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards !important;
-    opacity: 0;
-}
-
-.hero-buttons {
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards !important;
-    opacity: 0;
-}
-
-/* ================================
-   HEADER ENDLESS TYPEWRITER ANIMATION
-================================ */
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes blink {
-    0%, 100% { border-color: transparent; }
-    50% { border-color: #4285f4; }
-}
-
-/* Targets the header typing text */
-.brand-tagline, .typewriter span {
-    display: inline-block !important;
-    overflow: hidden !important;
-    white-space: nowrap !important;
-    border-right: 3px solid #4285f4 !important;
-    /* 'infinite alternate' makes it type forward, erase backward, and repeat endlessly */
-    animation: typing 2.5s steps(30, end) infinite alternate, blink 0.75s step-end infinite !important;
-   }
-
-/* Bold black bottom border targeting all common header tags */
-header, nav, .header, .nav, .navbar, #header, #nav {
-    border-bottom: 4px solid #000000 !important;
-   }
-/* ================================
-   HERO MOTTO STYLING
-================================ */
-.hero-content .motto {
-    color: #64748b !important; /* Slate-grey color */
-    font-weight: 400 !important;
-    font-size: 1.1rem !important;
-    letter-spacing: 3px !important; /* Wide spacing for a modern aesthetic */
-    text-transform: uppercase !important;
-    margin-top: -5px !important;
-    margin-bottom: 20px !important;
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards !important;
-    opacity: 0;
-   }
-   
-/* ================================
-   FOOTER MOTTO
-================================ */
-.footer-motto {
-    color: #1e293b !important; 
-    font-weight: 300 !important;
-    letter-spacing: 3px !important;
-    text-transform: uppercase !important;
-    font-size: 0.95rem !important;
-    margin-top: 5px !important;
-    margin-bottom: 15px !important;
-}
-/* ================================
-   SOCIAL ICONS HORIZONTAL ALIGNMENT
-================================ */
-.social-icons {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important; 
-    align-items: center !important;
-    gap: 30px !important; /* Perfect spacing between icons */
-    margin: 40px 0 30px 0 !important; 
-    padding: 0 !important;
-    width: 100% !important;
-}
-
-.social-icon {
-    display: inline-flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-decoration: none !important;
-    margin: 0 !important; /* Prevents stacked margins */
-}
-/* Base social icon sizing so backgrounds render properly */
-.social-icon {
-    width: 45px !important;
-    height: 45px !important;
-    border-radius: 50% !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-decoration: none !important;
-    transition: transform 0.2s ease !important;
-}
-
-/* Force override for GitHub icon background and hover */
-.social-icons a.social-icon.github-icon {
-    background-color: #000000 !important;
-    color: #ffffff !important;
-}
-
-.social-icons a.social-icon.github-icon:hover {
-    background-color: #000000 !important;
-    color: #ffffff !important;
-    transform: translateY(-2px) !important;
-   }
-/* ================================
-   UNIVERSAL BLACK TYPOGRAPHY
-================================ */
-body, h1, h2, h3, h4, h5, h6, p, span, li {
-    color: #000000 !important;
-}
-
